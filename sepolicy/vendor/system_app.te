@@ -3,3 +3,7 @@ set_prop(system_app, fm_prop)
 
 # zram
 r_dir_file(system_app sysfs_zram)
+
+# kcal
+allow system_app sysfs_kcal:dir search;
+allow system_app sysfs_kcal:file rw_file_perms;
