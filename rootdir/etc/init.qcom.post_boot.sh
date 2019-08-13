@@ -5627,3 +5627,10 @@ if [ "$panel_model" == "panel_name=nt35596 tianma fhd video mode dsi panel" ]; t
         echo "230 230 230" > /sys/devices/platform/kcal_ctrl.0/kcal
         echo "258" > /sys/devices/platform/kcal_ctrl.0/kcal_sat
 fi
+# set sys.use_fifo_ui prop if eas exist
+	available_governors=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors)
+	if echo "$available_governors" | grep schedutil; then
+	  echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	  echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+	  setprop sys.use_fifo_ui 1
+	fi
