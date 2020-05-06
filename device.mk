@@ -386,13 +386,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
+# Wallpapers
+PRODUCT_PACKAGES += \
+    PixelLiveWallpaperPrebuilt
+
 # Wi-Fi Display
 PRODUCT_PACKAGES += \
     libnl
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# Wallpapers
-PRODUCT_PACKAGES += \
-    WallpapersBReel2019
