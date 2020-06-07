@@ -23,6 +23,9 @@ $(call inherit-product, device/xiaomi/mido/device.mk)
 
 # Inherit some common PixelPlusUI stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Pixel Experience targets
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 
