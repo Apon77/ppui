@@ -23,6 +23,7 @@ import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
 import android.provider.Settings;
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
+import com.xiaomi.parts.preferences.YellowFlashPreference;
 
 import com.xiaomi.parts.kcal.Utils;
 import com.xiaomi.parts.ambient.SensorsDozeService;
@@ -61,6 +62,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
             FileUtils.setValue(KCAL_HUE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_HUE, HUE_DEFAULT));
             VibratorStrengthPreference.restore(context);
+            YellowFlashPreference.restore(context);
         }
 
         FileUtils.setValue(DeviceSettings.TORCH_1_BRIGHTNESS_PATH,

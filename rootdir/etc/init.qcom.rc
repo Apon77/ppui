@@ -139,6 +139,10 @@ on boot
     chmod 0660 /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness
     write /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness 0
 
+    # Yellow light intensity
+    chown system system /sys/devices/soc/qpnp-flash-led-25/driver/qpnp-flash-led-25/leds/led:flash_1/max_brightness
+    chmod 0660 /sys/devices/soc/qpnp-flash-led-25/driver/qpnp-flash-led-25/leds/led:flash_1/max_brightness
+
     # Vibration
     chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
     chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
