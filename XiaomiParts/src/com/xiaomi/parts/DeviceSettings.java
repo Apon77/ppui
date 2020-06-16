@@ -34,6 +34,7 @@ import com.xiaomi.parts.preferences.CustomSeekBarPreference;
 import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
+import com.xiaomi.parts.preferences.YellowFlashPreference;
 
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -71,6 +72,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String CATEGORY_TOUCHBOOST = "msm_touchboost";
     public static final String PREF_MSM_TOUCHBOOST = "touchboost";
     public static final String MSM_TOUCHBOOST_PATH = "/sys/module/msm_performance/parameters/touchboost";
+    public static final String KEY_FLASH = "yellow_flash";
 
     public static final String PREF_GPUBOOST = "gpuboost";
     public static final String GPUBOOST_SYSTEM_PROPERTY = "persist.gpuboost.profile";
@@ -78,6 +80,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String CPUBOOST_SYSTEM_PROPERTY = "persist.cpuboost.profile";
 
     private CustomSeekBarPreference mTorchBrightness;
+    private YellowFlashPreference mYellowFlash;
     private VibratorStrengthPreference mVibratorStrength;
     private Preference mKcal;
     private SecureSettingListPreference mSPECTRUM;
@@ -211,6 +214,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mCPUBOOST.setValue(FileUtils.getStringProp(CPUBOOST_SYSTEM_PROPERTY, "0"));
         mCPUBOOST.setSummary(mCPUBOOST.getEntry());
         mCPUBOOST.setOnPreferenceChangeListener(this);
+
+        mYellowFlash = (YellowFlashPreference) findPreference(KEY_FLASH);
+        if (mYellowFlash != null) {
+            mYellowFlash.setEnabled(YellowFlashPreference.isSupported());
+        }
 
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
