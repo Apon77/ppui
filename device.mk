@@ -314,7 +314,9 @@ PRODUCT_PACKAGES += \
     init.cpuboost.rc \
     init.cpuboost.sh \
     init.parallax.rc \
-    init.parallax.sh
+    init.parallax.sh \
+    init.camera.rc \
+    init.camera.sh
 
 # RCS
 PRODUCT_PACKAGES += \
