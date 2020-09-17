@@ -26,6 +26,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Pixel Experience targets
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
+CUSTOM_BUILD_TYPE := UNOFFICIAL
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 
@@ -40,6 +41,8 @@ BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.pixelplusui.maintainer=KhalakuzzamanApon
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="mido-user 7.0 NRD90M V9.6.1.0.NCFMIFD release-keys"
 
