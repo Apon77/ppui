@@ -636,7 +636,6 @@
          without explicit consent of the user. If no autofill service with the
           specified name exists on the device, autofill will be disabled by default.
     -->
-    <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
 
     <!-- Control whether the always on display mode is available. This should only be enabled on
          devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
