@@ -382,5 +382,5 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     oneshot
 
 on property:dev.bootcomplete=1
-    setprop sys.io.scheduler "bfq"
+    setprop sys.io.scheduler "cfq"
     restart ril-daemon

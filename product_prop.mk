@@ -7,4 +7,4 @@
 
 # Default to BFQ I/O scheduler
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.sys.io.scheduler=bfq
+    persist.sys.io.scheduler=cfq
