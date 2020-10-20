@@ -26,7 +26,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Pixel Experience targets
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
-CUSTOM_BUILD_TYPE := PLACEBO
+CUSTOM_BUILD_TYPE := PLACEBO2
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 
