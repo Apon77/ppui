@@ -196,10 +196,11 @@ debug.sf.phase_offset_threshold_for_next_vsync_ns=11600000 \
 ro.surface_flinger.max_virtual_display_dimension=4096
 
 # Better Scrolling
-windowsmgr.max_events_per_sec=150
-ro.min_pointer_dur=8
-ro.max.fling_velocity=12000
-ro.min.fling_velocity=8000
+PRODUCT_PROPERTY_OVERRIDES += \
+windowsmgr.max_events_per_sec=150 \
+ro.min_pointer_dur=8 \
+ro.max.fling_velocity=12000 \
+ro.min.fling_velocity=8000 \
 persist.sys.scrollingcache=3
 
 # Time Services
