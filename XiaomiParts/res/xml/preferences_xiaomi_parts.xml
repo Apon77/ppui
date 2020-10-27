@@ -29,7 +29,7 @@
             android:title="@string/white_torch_brightness_title" />
 	
         <com.xiaomi.parts.preferences.CustomSeekBarPreference
-            android:defaultValue="100"
+            android:defaultValue="0"
             android:key="yellow_torch_brightness"
             android:max="255"
             app:min="1"
