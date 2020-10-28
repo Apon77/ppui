@@ -1027,6 +1027,10 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|680d4ad1999c8db44ee7d6240dda4ec187
 # Power-off charging daemon
 -sbin/charger:bin/chargeonlymode|664dfa548b81cac348f1699222160f8d2b4d247c
 
+# Protobuf from vndk29
+vendor/lib64/libprotobuf-cpp-full.so|4261ababde944f970a717907284a0c7d8f21cb6c
+vendor/lib64/libprotobuf-cpp-lite.so|38649773fb84a4437f3981cb358c8881178f212b
+
 # QMI - from Tissot PKQ1.180917.001.V10.0.24.0.PDHMIXM
 lib64/libdiag_system.so:product/lib64/libdiag_system.so|811c30efa526e8e3828b112487b1d203cca5ed6e
 vendor/bin/irsc_util|3966b101150b54078b3e004212122a24f3fa0d82
