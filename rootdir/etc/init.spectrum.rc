@@ -29,8 +29,8 @@ on property:sys.boot_completed=1
    chown system system /sys/module/cpu_input_boost/parameters/input_boost_freq
    chmod 0644 /sys/module/cpu_input_boost/parameters/remove_input_boost_freq
    chmod 0644 /sys/module/cpu_input_boost/parameters/input_boost_freq
-   chown system system /sys/module/msm_thermal/core_control/enabled
-   chmod 0644 /sys/module/msm_thermal/core_control/enabled
+   chown system system /sys/module/msm_thermal/parameters/enabled
+   chmod 0644 /sys/module/msm_thermal/parameters/enabled
 
 # Set default profile on first boot
     exec u:r:init:s0 root root -- /vendor/bin/init.spectrum.sh
@@ -68,7 +68,7 @@ on property:persist.spectrum.profile=0
     write /sys/module/workqueue/parameters/power_efficient Y
     write /sys/module/cpu_input_boost/parameters/remove_input_boost_freq 400457
     write /sys/module/cpu_input_boost/parameters/input_boost_freq 400457
-    write /sys/module/msm_thermal/core_control/enabled 0
+    write /sys/module/msm_thermal/parameters/enabled N
 
     # GPU
     write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-tz"
@@ -170,7 +170,7 @@ on property:persist.spectrum.profile=3
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2016000
     write /sys/module/msm_performance/parameters/touchboost 1
     write /sys/module/workqueue/parameters/power_efficient N
-    write /sys/module/msm_thermal/core_control/enabled 0
+    write /sys/module/msm_thermal/parameters/enabled N
 
     # GPU
     write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-tz"
