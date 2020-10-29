@@ -9,6 +9,6 @@ allow qti_init_shell bluetooth_data_file:file r_file_perms;
 # Required for FM
 allow qti_init_shell self:socket create;
 #allow qti_init_shell sysfs:file { write };
-#allow qti_init_shell sysfs_kcal:dir search;
-#allow qti_init_shell sysfs_kcal:file rw_file_perms;
+allow qti_init_shell kcal_dev:dir search;
+allow qti_init_shell kcal_dev:file rw_file_perms;
 allow qti_init_shell system_prop:property_service { set };
