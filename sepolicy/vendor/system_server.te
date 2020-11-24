@@ -1,2 +1,6 @@
 # vibrator
 allow system_server sysfs_vibrator:file read;
+
+allow system_server exported_camera_prop:file read;
+allow system_server userspace_reboot_config_prop:file read;
+allow system_server userspace_reboot_exported_prop:file read;

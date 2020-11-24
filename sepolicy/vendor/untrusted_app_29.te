@@ -1,0 +1,1 @@
+allow untrusted_app_29 proc_zoneinfo:file read;
