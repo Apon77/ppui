@@ -1,0 +1,6 @@
+dontaudit gmscore_app cgroup:dir { open read };
+dontaudit gmscore_app cgroup:file getattr;
+dontaudit gmscore_app init_exec:lnk_file getattr;
+dontaudit gmscore_app linkerconfig_file:dir getattr;
+dontaudit gmscore_app mirror_data_file:dir getattr;
+dontaudit gmscore_app mnt_vendor_file:lnk_file getattr;

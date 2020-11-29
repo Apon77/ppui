@@ -1,0 +1,1 @@
+allow untrusted_app mnt_sdcard_file:lnk_file read;
