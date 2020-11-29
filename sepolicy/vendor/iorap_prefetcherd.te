@@ -1,4 +1,2 @@
-allow iorap_prefetcherd storaged_data_file:dir search;
-allow iorap_prefetcherd storaged_data_file:file { open read };
-allow iorap_prefetcherd system_app_data_file:file { open read };
+allow iorap_prefetcherd system_app_data_file:file { read };
 allow iorap_prefetcherd vendor_file:file { open read };
