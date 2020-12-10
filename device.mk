@@ -145,7 +145,10 @@ PRODUCT_PACKAGES += \
     camera.msm8953 \
     libmm-qcamera \
     libui_shim \
-    Snap
+    OpenCamera
+
+RODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/net.sourceforge.opencamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/net.sourceforge.opencamera.xml
 
 # Component overrides
 PRODUCT_COPY_FILES += \
