@@ -60,6 +60,7 @@ ro.bluetooth.hfp.ver=1.7
 PRODUCT_PROPERTY_OVERRIDES += \
 media.camera.ts.monotonic=1 \
 persist.camera.mct.debug=0 \
+persist.camera.eis.enable=1 \
 persist.camera.iface.logs=0 \
 persist.camera.imglib.logs=0 \
 persist.camera.isp.clock.optmz=0 \
