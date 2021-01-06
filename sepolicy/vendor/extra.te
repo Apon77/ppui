@@ -1,4 +1,4 @@
-hal_wifi_default ==============
+#============= hal_wifi_default ==============
 allow hal_wifi_default vendor_tombstone_data_file:dir search;
 
 #============= system_app ==============
@@ -8,8 +8,7 @@ allow system_app sysfs_leds:dir search;
 allow untrusted_app_27 sysfs_kgsl:dir search;
 
 #============= untrusted_app_29 ==============
-allow untrusted_app_29 dalvikcache_data_file:file execmod;
-allow untrusted_app_29 proc:file { getattr read };
+allow untrusted_app_29 proc:file { getattr };
 allow untrusted_app_29 proc_iomem:file getattr;
 allow untrusted_app_29 proc_keys:file getattr;
 allow untrusted_app_29 proc_kmsg:file getattr;
