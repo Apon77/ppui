@@ -1,0 +1,20 @@
+#============= hal_wifi_default ==============
+allow hal_wifi_default vendor_tombstone_data_file:dir search;
+
+#============= system_app ==============
+allow system_app sysfs_leds:dir search;
+
+#============= untrusted_app_27 ==============
+allow untrusted_app_27 sysfs_kgsl:dir search;
+
+#============= untrusted_app_29 ==============
+allow untrusted_app_29 proc:file { getattr };
+allow untrusted_app_29 proc_iomem:file getattr;
+allow untrusted_app_29 proc_keys:file getattr;
+allow untrusted_app_29 proc_kmsg:file getattr;
+allow untrusted_app_29 proc_misc:file getattr;
+allow untrusted_app_29 proc_qtaguid_stat:file read;
+allow untrusted_app_29 proc_stat:file getattr;
+allow untrusted_app_29 proc_swaps:file getattr;
+allow untrusted_app_29 proc_zoneinfo:file read;
+allow untrusted_app_29 sysfs_kgsl:dir search;
