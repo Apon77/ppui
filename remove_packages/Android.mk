@@ -5,7 +5,7 @@ LOCAL_MODULE := RemovePackages
 LOCAL_SRC_FILES := false
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
-LOCAL_OVERRIDES_PACKAGES := Email Exchange Exchange2 UnifiedEmail Eleven messaging ExactCalculator Calendar Terminal Gallery2 Contacts LatinIME libjni_latinimegoogle DeskClock AEXPapers XiaomiParts WallpaperPickerGoogle
+LOCAL_OVERRIDES_PACKAGES := Email Exchange Exchange2 UnifiedEmail Eleven messaging ExactCalculator Calendar Terminal Gallery2 Contacts LatinIME libjni_latinimegoogle DeskClock AEXPapers XiaomiParts WallpaperPickerGoogle OpenCamera
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 include $(BUILD_PREBUILT)
