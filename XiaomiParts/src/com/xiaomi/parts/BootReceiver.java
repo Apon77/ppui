@@ -51,7 +51,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 	//Yellow Torch
         FileUtils.setValue(DeviceSettings.TORCH_YELLOW_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        DeviceSettings.PERF_YELLOW_TORCH_BRIGHTNESS, 100));
+                        DeviceSettings.PERF_YELLOW_TORCH_BRIGHTNESS, 0));
 
         //Vibration
 	FileUtils.setValue(DeviceSettings.PREF_VIBRATION_PATH, Settings.Secure.getInt(context.getContentResolver(),
