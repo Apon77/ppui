@@ -410,3 +410,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts \
+    init.gpuboost.rc \
+    init.gpuboost.sh \
+    init.cpuboost.rc \
+    init.cpuboost.sh \
+    init.parallax.rc \
+    init.parallax.sh
