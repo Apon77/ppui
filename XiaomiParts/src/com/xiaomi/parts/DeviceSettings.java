@@ -33,9 +33,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_DEVICE_KCAL = "device_kcal";
 private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
 
-	private static final String PREF_SPECTRUM = "spectrum";
-￼    private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
-
     // Vibration override will use bool instead of integer
     public static final String PREF_VIBRATION_OVERRIDE = "vmax_override";
     public static final String PREF_VIBRATION_PATH = "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override";
@@ -76,7 +73,6 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
 
     private CustomSeekBarPreference mSpeakerGain;
     private CustomSeekBarPreference mEarpieceGain;
-    private SecureSettingListPreference mSPECTRUM;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -113,11 +109,6 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
         fpsInfo.setOnPreferenceChangeListener(this);
-
-		mSPECTRUM = (SecureSettingListPreference) findPreference(PREF_SPECTRUM);
-￼        mSPECTRUM.setValue(FileUtils.getStringProp(SPECTRUM_SYSTEM_PROPERTY, "0"));
-￼        mSPECTRUM.setSummary(mSPECTRUM.getEntry());
-￼        mSPECTRUM.setOnPreferenceChangeListener(this);
 
         boolean enhancerEnabled;
         try {
@@ -214,12 +205,6 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
                     DiracService.sDiracUtils.setEnabled((boolean) value);
                 }
                 break;
-
-            case PREF_SPECTRUM:
-￼                mSPECTRUM.setValue((String) value);
-￼                mSPECTRUM.setSummary(mSPECTRUM.getEntry());
-￼                FileUtils.setStringProp(SPECTRUM_SYSTEM_PROPERTY, (String) value);
-￼                break;
 
             case PREF_HEADSET:
                 try {
