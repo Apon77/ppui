@@ -2,3 +2,19 @@ persist.net.doxlat              u:object_r:vendor_xlat_prop:s0
 persist.vendor.camera.dbglog    u:object_r:camera_prop:s0
 vendor.thermal.config           u:object_r:vendor_thermal_prop:s0
 wifi.active.interface           u:object_r:wifi_prop:s0
+
+# HAL3
+persist.camera.HAL3.enable                    u:object_r:camera_prop:s0
+
+# GPUboost
+persist.gpuboost.profile           u:object_r:gpuboost_prop:s0
+
+# CPUboost
+persist.cpuboost.profile           u:object_r:cpuboost_prop:s0
+
+persist.cpucore.profile            u:object_r:cpucore_prop:s0
+persist.lkm.profile		   u:object_r:lkm_prop:s0
+persist.tcp.profile		   u:object_r:tcp_prop:s0
+
+# Dirac
+persist.audio.dirac.                    u:object_r:dirac_prop:s0
