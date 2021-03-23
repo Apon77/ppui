@@ -26,6 +26,17 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 
+#PPUI stuffs
+TARGET_FACE_UNLOCK_SUPPORTED = true
+CUSTOM_BUILD_TYPE=OFFICIAL
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ppui.device_name=Redmi Note 4x \
+ro.ppui.version=3.3 \
+ro.ppui.version_code=Tanzanite \
+ro.ppui.is_official=true \
+ro.ppui.maintainer_name=KhalakuzzamanApon
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
 PRODUCT_NAME := aosp_mido
