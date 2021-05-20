@@ -28,7 +28,7 @@ persist.device.config.runtime_native.uasp_pool_enabled=true
 
 #PPUI stuffs
 ro.ppui.device_name=Redmi Note 4x
-ro.ppui.version=3.3
-ro.ppui.version_code=Tanzanite
+ro.ppui.version=3.5
+ro.ppui.version_code=Jasper
 ro.ppui.is_official=true
 ro.ppui.maintainer_name=Khalakuzzaman Apon
